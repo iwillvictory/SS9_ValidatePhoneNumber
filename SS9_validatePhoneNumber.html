@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Validate Phone Number</title>
+</head>
+<body>
+    <script>
+        function  validatePhoneNumber(phoneNumber) {
+            let regEx= /^\(\d{2}\)-\(0\d{9}\)$/;
+            alert(regEx.toString());
+            return regEx.test(phoneNumber);
+        }
+
+        ////////Test/////////
+        let phoneNum1= "(84)-(0234238345)";
+        let phoneNum2="(a8)-(22222222)"
+        if(validatePhoneNumber(phoneNum1)){
+            alert("phone number '" + phoneNum1 + "' is valid ");
+        }else{
+            alert("phone number '" + phoneNum1 + "' is invalid ");
+        }
+
+        if(validatePhoneNumber(phoneNum2)){
+            alert("phone number '" + phoneNum2 + "' is valid ");
+        }else{
+            alert("phone number '" + phoneNum2 + "' is invalid ");
+        }
+    </script>
+
+</body>
+</html>
